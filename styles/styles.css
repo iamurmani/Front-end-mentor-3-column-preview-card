@@ -1,0 +1,133 @@
+:root {
+    --brightorange : hsl(31, 77%, 52%);
+    --darkcyan : hsl(184, 100%, 22%);
+    --verydarkcyan : hsl(179, 100%, 13%);
+    --transparentwhite : hsla(0, 0%, 100%, 0.75);
+    --verylightgray : hsl(0, 0%, 95%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,html {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+p {
+    color: var(--transparentwhite);
+    line-height: 1.7;
+}
+
+h1 {
+    color: var(--verylightgray);
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', cursive;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 60%;
+    border-radius: 5px;
+}
+.sedan {
+    background: var(--brightorange);
+}
+
+.sedan button{
+    color: var(--brightorange);
+}
+
+.sedan button:hover{
+    background: var(--brightorange);
+    border: 2px solid var(--verylightgray);
+    color: var(--verylightgray);
+    cursor: pointer;
+}
+.suv {
+    background: var(--darkcyan);
+}
+
+.suv button{
+    color: var(--darkcyan);
+}
+.suv button:hover{
+    background: var(--darkcyan);
+    border: 2px solid var(--verylightgray);
+    color: var(--verylightgray);
+    cursor: pointer;
+}
+
+.luxury {
+    background: var(--verydarkcyan);
+}
+
+.luxury button {
+    color: var(--verydarkcyan);
+}
+
+.luxury button:hover {
+    background: var(--verydarkcyan);
+    border: 2px solid var(--verylightgray);
+    color: var(--verylightgray);
+    cursor: pointer;
+}
+.card {
+    padding: 5%;
+}
+
+.card h1,p {
+    margin-top: 15%;
+}
+
+.card button {
+    margin-top: 25%;
+    background-color: var(--verylightgray);
+    padding: 6%;
+    border: none;
+    border-radius: 25px;
+    width: 65%;
+    font-weight: bold;
+}
+
+.card:first-child {
+    border-radius: 10px 0px 0px 10px;
+}
+.card:last-child {
+    border-radius: 0px 10px 10px 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+@media screen and (max-width:375px) {
+    .container {
+        flex-direction: column;
+        height: 90%;
+        width: 90%;
+        margin: 20% 0%;
+    }
+    .card {
+        padding: 11%;
+    }
+    .card h1,p {
+        margin-top: 10%;
+    }
+
+    .card button {
+        margin-top: 8%;
+    }
+    .card:first-child {
+        border-radius: 10px 10px 0px 0px;
+    }
+    .card:last-child {
+        border-radius: 0px 0px 10px 10px;
+    }
+}
